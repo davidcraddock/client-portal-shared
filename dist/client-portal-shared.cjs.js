@@ -166,7 +166,7 @@ function plural(ms, msAbs, n, name) {
 }
 
 function getNextLunchtime(hours, minutes) {
-    const lunchtime = new Date();
+    var lunchtime = new Date();
     lunchtime.setHours(hours);
     lunchtime.setMinutes(minutes);
     lunchtime.setSeconds(0);
@@ -2656,8 +2656,10 @@ var SvgIconPortfolio = function SvgIconPortfolio(props) {
   })));
 };
 
-function howLongUntilLunch(hours = 12, minutes = 30) {
-    const millisecondsUntilLunchTime = millisecondsUntil(getNextLunchtime(hours, minutes));
+function howLongUntilLunch(hours, minutes) {
+    if (hours === void 0) { hours = 12; }
+    if (minutes === void 0) { minutes = 30; }
+    var millisecondsUntilLunchTime = millisecondsUntil(getNextLunchtime(hours, minutes));
     return ms(millisecondsUntilLunchTime, { long: true });
 }
 
