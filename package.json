@@ -1,9 +1,10 @@
 {
-  "name": "client-portal-shared",
+  "name": "clientportalshared",
   "version": "1.0.0",
-  "main": "dist/client-portal-shared.cjs.js",
-  "module": "dist/client-portal-shared.esm.js",
-  "browser": "dist/client-portal-shared.umd.js",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "browser": "dist/index.umd.js",
+  "typings": "dist/index.d.ts",
   "dependencies": {
     "ms": "^2.0.0"
   },
@@ -19,6 +20,7 @@
     "react": "^17.0.2",
     "rimraf": "^3.0.2",
     "rollup": "^2.67.2",
+    "rollup-plugin-dts": "^4.1.0",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-typescript2": "^0.31.2",
     "ts-node": "^10.0.5",
